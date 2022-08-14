@@ -1,0 +1,23 @@
+{
+	"name": "node-api-test",
+	"version": "1.0.0",
+	"description": "Node API for PHP (Docker test)",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon main"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/luanmarques1789/docker-introdution.git"
+	},
+	"author": "Luan Matheus Marques",
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	},
+	"dependencies": {
+		"express": "^4.18.1",
+		"mysql": "^2.18.1",
+		"mysql2": "^2.3.3"
+	}
+}

@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS `api`;
+USE `api`;
+
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO products VALUES (NULL, 'Product 1', 10.00), 
+  (NULL, 'Product 2', 20.00), 
+  (NULL, 'Product 3', 30.00);
