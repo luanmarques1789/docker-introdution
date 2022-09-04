@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <?php
-    $result = file_get_contents('http://node-container:5030/products');
-    $products = json_decode($result);
+  $result = file_get_contents('http://docker-introduction-node:5030/products');
+  $products = json_decode($result);
   ?>
 
   <table>
@@ -20,7 +22,7 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach ($products as $product): ?>
+      <?php foreach ($products as $product) : ?>
         <tr>
           <td><?php echo $product->name; ?></td>
           <td><?php echo $product->price; ?></td>
@@ -30,4 +32,5 @@
     </thead>
   </table>
 </body>
+
 </html>
