@@ -1,13 +1,20 @@
 const express = require('express');
 const mysql = require('mysql2');
+const {
+	MYSQL_USER_PASSWORD,
+	MYSQL_USER,
+	DB_HOST,
+	DB_NAME,
+	NODE_PORT,
+} = require('./constants');
 
 const app = express();
 
 const conn = mysql.createConnection({
-	host: 'docker-introduction-mysql',
-	user: 'root',
-	password: 'root',
-	database: 'api',
+	host: DB_HOST,
+	user: MYSQL_USER,
+	password: MYSQL_USER_PASSWORD,
+	database: DB_NAME,
 });
 
 conn.connect();
@@ -20,7 +27,7 @@ app.get('/products', function (req, res) {
 	});
 });
 
-const port = 5030;
-app.listen(port, '0.0.0.0', () => {
-	console.log(`Server is running on port ${port}`);
+const port = NODE_PORT;
+app.listen(port, () => {
+	console.log(`Server is running on http://localhost:${port}`);
 });
