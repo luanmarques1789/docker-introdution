@@ -8,6 +8,7 @@
 		"type": "git",
 		"url": "https://github.com/luanmarques1789/docker-introdution.git"
 	},
+	"homepage": "https://github.com/luanmarques1789/docker-introdution.git#readme",
 	"scripts": {
 		"dev": "nodemon main"
 	},
